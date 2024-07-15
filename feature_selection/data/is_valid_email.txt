@@ -1,0 +1,26 @@
+"(),:;<>[\]@example.com
+just"not"right@example.com
+this\ is"really"not\allowed@example.com
+email@example..com
+Abc..123@example.com
+.stancode@gmail.com
+stancode.@yahoo.com.tw
+plainaddress
+#@%^%#$@#$@#.com
+@example.com
+example.com@
+www.stanford.edu
+www.president.gov.tw
+much."more\ unusual"@example.com
+very.unusual."@".unusual.com@example.com
+email@gmail.com
+firstname.lastname@example.com
+email@subdomain.yahoo.com
+firstname+lastname@yahoo.com.tw
+jerryliao@alumni.stanford.edu
+liao821226.mse01@g2.nctu.edu.tw
+liao821226@stanford.edu
+lifeishard@tsmc.com
+hotpot@hotmail.com
+"john..doe"@example.org
+111@icloud.com

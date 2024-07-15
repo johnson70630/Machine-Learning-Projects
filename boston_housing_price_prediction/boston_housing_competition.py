@@ -1,0 +1,80 @@
+"""
+This file demonstrates how to analyze boston
+housing dataset. Students will upload their 
+results to kaggle.com and compete with people
+in class!
+"""
+
+import pandas as pd
+from sklearn import preprocessing, linear_model, metrics, model_selection
+
+TRAIN_FILE = 'boston_housing/train.csv'
+TEST_FILE = 'boston_housing/test.csv'
+
+
+def main():
+	# data preprocessing
+	data = pd.read_csv(TRAIN_FILE)
+	train_data, val_data = model_selection.train_test_split(data, test_size=0.4)
+	X_train, Y = data_preprocess(train_data, mode='Train')
+	X_train = one_hot_encoding(X_train)
+
+	# training
+	h = linear_model.LinearRegression()
+	poly_phi = preprocessing.PolynomialFeatures(degree=2)
+	X_train_poly = poly_phi.fit_transform(X_train)
+	regressor_poly = h.fit(X_train_poly, Y)
+
+	# validating
+	X_val, Y = data_preprocess(val_data, mode='Train')
+	X_val = one_hot_encoding(X_val)
+	X_val_poly = poly_phi.transform(X_val)
+	validation = regressor_poly.predict(X_val_poly)
+	print('Error: ', metrics.mean_squared_error(validation, Y) ** 0.5)
+
+	# predicting
+	data = pd.read_csv(TEST_FILE)
+	X_test, id = data_preprocess(data, mode='Test')
+	X_test = one_hot_encoding(X_test)
+	X_test_poly = poly_phi.transform(X_test)
+	predictions = regressor_poly.predict(X_test_poly)
+	print('predictions:', predictions)
+	out_file(predictions, id, 'boston_housing_linear_bagging.csv')
+
+
+def data_preprocess(data, mode='Train'):
+	id = data.pop('ID')
+
+	if mode == 'Train':
+		labels = data.pop('medv')
+		return data, labels
+	else:
+		return data, id
+
+
+def one_hot_encoding(data):
+	data = pd.get_dummies(data, columns=['chas'])
+	return data
+
+
+def out_file(predictions, id, filename):
+	print('\n===============================================')
+	print(f'Writing predictions to --> {filename}')
+	with open(filename, 'w') as out:
+		out.write('ID,medv\n')
+		for i in range(len(id)):
+			out.write(str(id[i]) + ',' + str(predictions[i]) + '\n')
+	print('===============================================')
+
+
+def standardization(data, mode='Train'):
+	standardizer = preprocessing.StandardScaler()
+	if mode == 'Train':
+		data = standardizer.fit_transform(data)
+	else:
+		data = standardizer.transform(data)
+	return data
+
+
+if __name__ == '__main__':
+	main()
