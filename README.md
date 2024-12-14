@@ -10,17 +10,17 @@ This file shows the fundamental concepts of machine learning:
   - polynomial features
   - training process
   
-## [K Nearest Neighbors (KNN)](/k_nearest_neighbor/)
+## [K Nearest Neighbors (KNN)](/k_nearest_neighbors/)
 
-## [P-Value & KNN Regression](/p_value_n_knn_reg/)
+## [P-Value & KNN Regression](/p_value_n_knn_regression/)
 
 ## [Time Series Classification](/time_series_classification/)
 
-## [Decision Trees & LASSO and Boosting for Regression](/d_tree_penalty_reg/)
+## [Decision Trees & LASSO and Boosting for Regression](/d_tree/)
 
 ## [Tree-Based Methods & SMOTE & XGBoost](/tree_smote_xgboost/)
 
-## [Multi-class and Multi-Label Classification](/multiclass_n_label_classification/)
+## [Multi-class and Multi-Label Classification](/multiclass_n_multilabel_classification/)
 
 ## [Supervised, Semi-Supervised, and Unsupervised Learning](/supervised_semisupervised_unspervised/)
 
