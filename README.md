@@ -1,28 +1,35 @@
 # Machine-Learning-Projects
 
-## Feature Selection
-This file shows selecting effective features and weights manually for a set of email data to increase recognition accuracy.
+## [Feature Selection](/feature_selection/)
 
-[Data](feature_selection/data/is_valid_email.txt): The first 13 entries in the file are invalid email addresses; the next 13 entries are valid email addresses
-
-## Linear Regression Cubic Equation
+## [Linear Regression Cubic Equation](/linear_regression_cubic_equation/)
 This file shows the fundamental concepts of machine learning:
   - loss function
   - cost function
   - linear regression
   - polynomial features
   - training process
+  
+## [K Nearest Neighbors (KNN)](/k_nearest_neighbor/)
 
-## Rotten Tomatoes Movie Reviews Evaluation
-This file shows how to build a machine learning system for distinguishing positive and negative Rotten Tomatoes movie reviews
+## [P-Value & KNN Regression](/p_value_n_knn_reg/)
 
-## Boston Housing Price Prediction
-This file shows building a machine learning model to predict Boston house prices for [Kaggle competition](https://www.kaggle.com/competitions/sc201-jul-2023).
+## [Time Series Classification](/time_series_classification/)
 
-## Apple Stock Price Analysis
+## [Decision Trees & LASSO and Boosting for Regression](/d_tree_penalty_reg/)
 
-## Credit Card Default Analysis
+## [Tree-Based Methods & SMOTE & XGBoost](/tree_smote_xgboost/)
 
-## Wine Quality Analysis
-Dataset: https://archive.ics.uci.edu/dataset/186/wine+quality
+## [Multi-class and Multi-Label Classification](/multiclass_n_label_classification/)
 
+## [Supervised, Semi-Supervised, and Unsupervised Learning](/supervised_semisupervised_unspervised/)
+
+## [Rotten Tomatoes Movie Reviews Evaluation](/rotten_tomatoes_movie_reviews_evaluation/)
+
+## [Boston Housing Price Prediction](/boston_housing_price_prediction/)
+
+## [Apple Stock Price Analysis](/apple_stock_price_analysis/)
+
+## [Credit Card Default Analysis](/credit_card_default_analysis/)
+
+## [Wine Quality Analysis](/wine_quality_analysis/)
